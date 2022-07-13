@@ -1,6 +1,6 @@
-package net.javaguides.springboot.config;
+package net.java.springboot.config;
 
-import net.javaguides.springboot.model.Role;
+import net.java.springboot.model.Role;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -17,14 +17,12 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
     //кастомная реализация HttpSecurity http
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()   // защита от csrf угроз
                 .authorizeRequests()    //авторизовать запрос след. образом
-                //.antMatchers("/login").permitAll()
                 .antMatchers(HttpMethod.GET, "/**").hasAnyRole(Role.USER.name())
                 .antMatchers(HttpMethod.POST, "/**").hasAnyRole(Role.USER.name())
                 .antMatchers(HttpMethod.DELETE, "/**").hasAnyRole(Role.USER.name())

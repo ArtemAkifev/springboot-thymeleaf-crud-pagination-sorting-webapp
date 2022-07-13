@@ -1,10 +1,9 @@
-package net.javaguides.springboot.service;
+package net.java.springboot.service;
 
 import java.util.List;
 
+import net.java.springboot.model.Employee;
 import org.springframework.data.domain.Page;
-
-import net.javaguides.springboot.model.Employee;
 
 public interface EmployeeService {
     List<Employee> getAllEmployees();

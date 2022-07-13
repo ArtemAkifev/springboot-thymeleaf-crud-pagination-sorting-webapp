@@ -1,4 +1,4 @@
-package net.javaguides.springboot.controller;
+package net.java.springboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

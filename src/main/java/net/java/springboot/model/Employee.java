@@ -1,4 +1,4 @@
-package net.javaguides.springboot.model;
+package net.java.springboot.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
